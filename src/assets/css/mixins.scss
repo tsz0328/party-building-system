@@ -1,0 +1,57 @@
+// 自定义点击按钮样式
+@mixin click-btn(
+  $hover-bg:lightgray,
+  $hover-color:black,
+  $active-bg:gray,
+  $active-color:black
+){
+  &:hover{
+    background-color: $hover-bg;
+    color: $hover-color;
+  }
+  &:active{
+    background-color: $active-bg;
+    color: $active-color;
+  }
+}
+
+// 顶栏右边按钮
+@mixin top-bar-right-btn {
+  font-size: 16px;
+  margin: 0 20px 0 auto;
+  border-radius: 4px;
+}
+
+// 筛选栏
+@mixin filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: lightgray;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+// 每一项内容
+@mixin item {
+  display: flex;
+  margin-bottom: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+// 每一项头部
+@mixin item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+@mixin item-details{
+  display: flex;
+  border-top: 1px dashed gray;
+  margin: 10px 0;
+  padding: 10px 0;
+}

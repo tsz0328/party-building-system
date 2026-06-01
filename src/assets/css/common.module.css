@@ -1,0 +1,58 @@
+/* 全局公共容器样式 */
+.commonContainer {
+  padding-bottom: 40px;
+}
+
+/* 全局公共顶部标题栏样式 */
+.topTitleBar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  background-color: red;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* 全局公共返回按钮样式 */
+.backBtn {
+  color: white !important;
+  margin-right: 40px;
+  font-size: 24px !important;
+}
+
+.backBtn:hover {
+  color: lightgray !important;
+}
+
+.backBtn:active {
+  color: gray !important;
+}
+
+/* 全局公共内容标题样式 */
+.contentTitle {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 全局列表内容 */
+.contentList {
+  margin-bottom: 40px;
+}
+
+/* 每一项标题 */
+.itemHeaderTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+/* 每一项状态 */
+.itemStatus {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  gap: 10px;
+}
+

@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "skipLibCheck": true, // 跳过第三方库类型检查，避免隐式报错
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  }
+}
