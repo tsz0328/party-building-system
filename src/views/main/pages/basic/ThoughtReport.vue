@@ -101,7 +101,7 @@ const reportList = computed(() => {
   })
 })
 
-// 自定义标签样式（匹配设计图）
+// 自定义标签样式
 const getStatusTagStyle = (status: string) => {
   const styles: Record<string, string> = {
     需修改: 'background-color: red',
@@ -192,13 +192,14 @@ export default {}
   color: black;
 }
 
-/* 代表列 */
+/* 代办表列 */
 .reminder-list li {
   margin-bottom: 5px;
 }
 
 /* 思想汇报头部 */
 .report-header {
+  background-color: #fcf4f5;
   display: flex;
   justify-content: space-between;
   align-items: center;

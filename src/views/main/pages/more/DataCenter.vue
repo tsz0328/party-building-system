@@ -82,9 +82,9 @@
 </template>
 
 <script setup lang="ts">
-import BarChart from '@/views/teacher/components/BarChart.vue'
-import LineChart from '@/views/teacher/components/LineChart.vue'
-import DataStatisticsTable from '@/views/teacher/components/DataStatisticsTable.vue'
+import BarChart from '@/views/main/components/BarChart.vue'
+import LineChart from '@/views/main/components/LineChart.vue'
+import DataStatisticsTable from '@/views/main/components/DataStatisticsTable.vue'
 import commonCss from '@/assets/css/common.module.css'
 import { useDataStore } from '@/stores/data'
 import { storeToRefs } from 'pinia'

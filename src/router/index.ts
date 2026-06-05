@@ -2,16 +2,16 @@ import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 
 // 导入页面组件
 import LoginPage from '@/views/Login/LoginPage.vue'
-import TeacherLayout from '@/views/teacher/TeacherLayout.vue'
-import TeacherContent from '@/views/teacher/TeacherContent.vue'
-import EditProfile from '@/views/teacher/pages/more/EditProfile.vue'
-import NotificationCenter from '@/views/teacher/pages/more/NotificationCenter.vue'
-import HonorCenter from '@/views/teacher/pages/more/HonorCenter.vue'
-import AddHonor from '@/views/teacher/pages/more/AddHonor.vue'
-import ThoughtReportCenter from '@/views/teacher/pages/more/ThoughtReportCenter.vue'
-import AddThoughtReport from '@/views/teacher/pages/more/AddThoughtReport.vue'
-import OrganizeActivityCenter from '@/views/teacher/pages/more/OrganizeActivityCenter.vue'
-import DataCenter from '@/views/teacher/pages/more/DataCenter.vue'
+import TeacherLayout from '@/views/main/TeacherLayout.vue'
+import TeacherContent from '@/views/main/TeacherContent.vue'
+import EditProfile from '@/views/main/pages/more/EditProfile.vue'
+import NotificationCenter from '@/views/main/pages/more/NotificationCenter.vue'
+import HonorCenter from '@/views/main/pages/more/HonorCenter.vue'
+import AddHonor from '@/views/main/pages/more/AddHonor.vue'
+import ThoughtReportCenter from '@/views/main/pages/more/ThoughtReportCenter.vue'
+import AddThoughtReport from '@/views/main/pages/more/AddThoughtReport.vue'
+import OrganizeActivityCenter from '@/views/main/pages/more/OrganizeActivityCenter.vue'
+import DataCenter from '@/views/main/pages/more/DataCenter.vue'
 
 // 定义路由规则（使用 RouteRecordRaw 类型约束）
 const routes: Array<RouteRecordRaw> = [

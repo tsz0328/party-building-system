@@ -15,15 +15,15 @@ export const useUserStore = defineStore(
 
     //状态：登录
     const token = ref<string>('') // Token：后端返回的核心登录凭证，后续所有接口都要靠它识别身份
-    const userBaseInfo = ref<LoginResult | null>(null) // 登录接口返回的基础信息（和 UserInfo 不是一个结构，分开存更清晰）
+    const userBaseInfo = ref<LoginResult | null>(null) // 登录接口返回的基础信息
     const loginLoading = ref(false) // 登录按钮的 loading：防止用户重复点击登录
     const loginError = ref<string | null>(null) // 登录专属错误：比如"账号密码错误"
 
     //计算属性
-    // 是否登录：只要有 token 就算已登录（刷新页面后 token 还在，就保持登录状态）
+    // 是否登录：刷新页面后 token 还在，就保持登录状态
     const isLogin = computed(() => !!token.value)
 
-    // 用户类型：教师或学生（根据 role 字段判断，1=教师，2=学生）
+    // 用户类型：教师或学生（1=教师，2=学生）
     const userRole = computed<UserRole | null>(() => {
       if (!userBaseInfo.value) return null
       return userBaseInfo.value.role === 1 ? 'teacher' : 'student'

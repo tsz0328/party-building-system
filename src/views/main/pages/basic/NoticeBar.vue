@@ -31,10 +31,6 @@ const noticeStore = useNoticeStore()
 const noticeList = noticeStore.noticeList.slice(0, 3)
 </script>
 
-<script lang="ts">
-export default {}
-</script>
-
 <style scoped>
 .title-bar {
   display: flex;

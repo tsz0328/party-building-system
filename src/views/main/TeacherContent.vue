@@ -46,13 +46,13 @@
 </template>
 
 <script setup lang="ts">
-import PersonalInfo from '@/views/teacher/pages/basic/PersonalInfo.vue'
-import GrowthRecord from '@/views/teacher/pages/basic/GrowthRecord.vue'
-import NoticeBar from '@/views/teacher/pages/basic/NoticeBar.vue'
-import HonorWall from '@/views/teacher/pages/basic/HonorWall.vue'
-import ThoughtReport from '@/views/teacher/pages/basic/ThoughtReport.vue'
-import Activity from '@/views/teacher/pages/basic/OrganizeActivity.vue'
-import DataOverview from '@/views/teacher/pages/basic/DataOverview.vue'
+import PersonalInfo from '@/views/main/pages/basic/PersonalInfo.vue'
+import GrowthRecord from '@/views/main/pages/basic/GrowthRecord.vue'
+import NoticeBar from '@/views/main/pages/basic/NoticeBar.vue'
+import HonorWall from '@/views/main/pages/basic/HonorWall.vue'
+import ThoughtReport from '@/views/main/pages/basic/ThoughtReport.vue'
+import Activity from '@/views/main/pages/basic/OrganizeActivity.vue'
+import DataOverview from '@/views/main/pages/basic/DataOverview.vue'
 </script>
 
 <style scoped>
