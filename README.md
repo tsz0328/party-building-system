@@ -32,7 +32,7 @@ npm run dev
 ```
 
 ## 🌐 在线预览
-party-building-system-one.vercel.app
+party-building-system.pages.dev
 
 ## 📌 后续计划
 - 接入真实后端（Spring Boot + MySQL）
