@@ -1,4 +1,5 @@
 import { Request, Response } from 'express'
+import { validationResult } from 'express-validator'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import { success, fail } from '../types/response'
@@ -11,12 +12,14 @@ const mockUsers = [
 ]
 
 export const login = async (req: Request, res: Response): Promise<void> => {
-  const { account, password } = req.body
-
-  if (!account || !password) {
-    res.json(fail('账号和密码不能为空'))
+  // 校验请求参数
+  const errors = validationResult(req)
+  if (!errors.isEmpty()) {
+    res.status(400).json(fail(errors.array()[0].msg))
     return
   }
+
+  const { account, password } = req.body
 
   const user = mockUsers.find(u => u.account === account)
   if (!user) {
@@ -32,7 +35,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
 
   const token = jwt.sign(
     { id: user.id, account: user.account, role: user.role },
-    process.env.JWT_SECRET || 'secret',
+    process.env.JWT_SECRET!,
     { expiresIn: process.env.JWT_EXPIRES_IN || '7d' }
   )
 
@@ -40,7 +43,6 @@ export const login = async (req: Request, res: Response): Promise<void> => {
     token,
     account: user.account,
     role: user.role,
-    password: '',  // 前端 LoginResult 接口要求
     status: 1,
   }))
 }

@@ -32,20 +32,15 @@ instance.interceptors.request.use(
 instance.interceptors.response.use(
   (response) => {
     const res = response.data
-    console.log('响应数据:', res)
-    console.log('响应状态码:', response.status)
     if (res.code === 200) {
       return res // 返回 ApiResponse<T>
     } else {
-      console.error('接口返回错误:', res)
       return Promise.reject(new Error(res.msg || '请求失败'))
     }
   },
   (error) => {
     const userStore = useUserStore()
     let errMsg = '网络连接异常，请稍后重试'
-    console.log('错误详情:', error)
-    console.log('错误响应:', error.response)
     // 【新增】判断是否为 401（未登录/Token过期）
     if (error.response?.status === 401) {
       errMsg = '登录已失效，请重新登录'

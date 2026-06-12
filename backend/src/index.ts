@@ -7,6 +7,12 @@ import sequelize from './config/database'
 
 dotenv.config()
 
+// 启动前检查必需的环境变量
+if (!process.env.JWT_SECRET) {
+  console.error('❌ 环境变量 JWT_SECRET 未设置，请在 .env 文件中配置')
+  process.exit(1)
+}
+
 const app = express()
 const PORT = process.env.PORT || 3000
 

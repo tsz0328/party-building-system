@@ -53,7 +53,7 @@
     "prettier": "3.7.4",
     "sass": "^1.97.3",
     "typescript": "~5.9.3",
-    "vite": "beta",
+    "vite": "^6.2.0",
     "vite-plugin-mock": "^3.0.2",
     "vite-plugin-vue-devtools": "^8.0.5",
     "vitest": "^4.0.16",

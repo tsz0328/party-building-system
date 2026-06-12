@@ -19,7 +19,8 @@ app.use(pinia)
 app.use(router)
 app.use(ElementPlus)
 
-
+// NOTE: 全局注册所有 Element Plus 图标（开发便捷，但会增加打包体积）
+// TODO: 后续优化为按需引入（如使用 unplugin-icons 或在组件中单独 import）
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
